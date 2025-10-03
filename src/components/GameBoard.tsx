@@ -3,6 +3,7 @@
 import { useGameLogic } from '@/hooks/useGameLogic';
 import Link from 'next/link';
 import { Card } from './Card';
+import { Loading } from './Loading';
 
 interface GameBoardProps {
   theme: string;
@@ -16,7 +17,12 @@ export function GameBoard({ theme }: GameBoardProps) {
     isGameWon,
     handleCardClick,
     initializeGame,
+    isLoading,
   } = useGameLogic(theme);
+
+  if (isLoading) {
+    return <Loading />;
+  }
 
   if (isGameWon) {
     return (
@@ -53,7 +59,7 @@ export function GameBoard({ theme }: GameBoardProps) {
         <span>Jogadas: {moves}</span>
         <span>Pares Encontrados: {matchedPairs}</span>
       </div>
-      <div className="grid grid-cols-5 gap-4">
+      <div className="grid grid-cols-4 md:grid-cols-5 gap-4">
         {cards.map((card, index) => (
           <Card
             key={card.uniqueId}

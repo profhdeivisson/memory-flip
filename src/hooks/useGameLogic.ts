@@ -10,6 +10,7 @@ export function useGameLogic(themeSlug: string) {
   const [matchedPairs, setMatchedPairs] = useState(0);
   const [moves, setMoves] = useState(0);
   const [isChecking, setIsChecking] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
 
   const theme = themes.find(t => t.slug === themeSlug);
 
@@ -44,6 +45,7 @@ export function useGameLogic(themeSlug: string) {
     setMatchedPairs(0);
     setMoves(0);
     setIsChecking(false);
+    setIsLoading(false);
   }, [theme]);
 
   useEffect(() => {
@@ -107,5 +109,6 @@ export function useGameLogic(themeSlug: string) {
     isGameWon,
     handleCardClick,
     initializeGame,
+    isLoading,
   };
 }

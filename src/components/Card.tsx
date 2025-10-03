@@ -11,7 +11,7 @@ interface CardProps {
 export function Card({ card, onClick }: CardProps) {
   return (
     <div
-      className="group h-32 w-32 cursor-pointer [perspective:1000px]"
+      className="group h-20 w-20 md:h-32 md:w-32 cursor-pointer [perspective:1000px]"
       onClick={onClick}
     >
       <div
