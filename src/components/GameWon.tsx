@@ -1,7 +1,7 @@
 import { GameWonProps } from "@/types";
 import Link from "next/link";
 
-export function GameWon({ theme, moves, initializeGame }: GameWonProps) {
+export function GameWon({ moves, initializeGame }: GameWonProps) {
     return (
         <div className="flex flex-col items-center justify-center text-center">
         <h2 className="text-4xl font-bold text-green-400">Parabéns!</h2>

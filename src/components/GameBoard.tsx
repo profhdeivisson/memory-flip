@@ -1,7 +1,6 @@
 'use client';
 
 import { useGameLogic } from '@/hooks/useGameLogic';
-import Link from 'next/link';
 import { Card } from './Card';
 import { Loading } from './Loading';
 import { GameBoardProps } from '@/types';
