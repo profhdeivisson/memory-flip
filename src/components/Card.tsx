@@ -1,12 +1,6 @@
 'use client';
-
-import type { CardData } from '@/types';
 import Image from 'next/image';
-
-interface CardProps {
-  card: CardData;
-  onClick: () => void;
-}
+import type { CardProps } from '@/types';
 
 export function Card({ card, onClick }: CardProps) {
   return (

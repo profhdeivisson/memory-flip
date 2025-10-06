@@ -17,3 +17,8 @@ export interface GamePageProps {
     slug: string;
   };
 }
+
+export interface CardProps {
+  card: CardData;
+  onClick: () => void;
+}
