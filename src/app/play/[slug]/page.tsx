@@ -1,12 +1,7 @@
 import { GameBoard } from '@/components/GameBoard';
 import { themes } from '@/lib/themes';
 import { notFound } from 'next/navigation';
-
-interface GamePageProps {
-  params: {
-    slug: string;
-  };
-}
+import { GamePageProps } from '@/types';
 
 export default function GamePage({ params }: GamePageProps) {
   const { slug } = params;

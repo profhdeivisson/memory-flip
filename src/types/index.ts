@@ -11,3 +11,9 @@ export interface Theme {
   slug: string;
   images: string[];
 }
+
+export interface GamePageProps {
+  params: {
+    slug: string;
+  };
+}
