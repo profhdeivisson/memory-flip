@@ -4,10 +4,7 @@ import { useGameLogic } from '@/hooks/useGameLogic';
 import Link from 'next/link';
 import { Card } from './Card';
 import { Loading } from './Loading';
-
-interface GameBoardProps {
-  theme: string;
-}
+import { GameBoardProps } from '@/types';
 
 export function GameBoard({ theme }: GameBoardProps) {
   const {

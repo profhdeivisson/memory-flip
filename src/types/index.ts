@@ -22,3 +22,7 @@ export interface CardProps {
   card: CardData;
   onClick: () => void;
 }
+
+export interface GameBoardProps {
+  theme: string;
+}
