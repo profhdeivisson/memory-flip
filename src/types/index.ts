@@ -26,3 +26,9 @@ export interface CardProps {
 export interface GameBoardProps {
   theme: string;
 }
+
+export interface GameWonProps {
+  theme: string;
+  moves: number;
+  initializeGame: () => void;
+}
